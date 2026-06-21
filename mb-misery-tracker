@@ -1,0 +1,219 @@
+const MISERIES = [
+    {
+      "id": 1,
+      "name": "Psalm 1:1",
+      "text": "The City shall be made hollow. Of those who rest in hollowness, they shall not be seen.",
+      "isFinal": false
+    },
+    {
+      "id": 2,
+      "name": "Psalm 1:2",
+      "text": "And the earth shall shake and be riven. And from the cracks shall rise a poisonous mist, and in ten days it will shroud the world.",
+      "isFinal": false
+    },
+    {
+      "id": 3,
+      "name": "Psalm 1:3",
+      "text": "Of those who build mightily, stone by stone, so shall they fall, stone by stone.",
+      "isFinal": false
+    },
+    {
+      "id": 4,
+      "name": "Psalm 1:4",
+      "text": "And the depths of the underworld shall bring forth flying spectres and crawling beasts. In their passing the worm grows fat, the vulture weary.",
+      "isFinal": false
+    },
+    {
+      "id": 5,
+      "name": "Psalm 1:5",
+      "text": "Doubt is crowned. The loyal shall turn their blades on those who silver gave.",
+      "isFinal": false
+    },
+    {
+      "id": 6,
+      "name": "Psalm 1:6",
+      "text": "And blood-cough shall spread like fire across the wastelands of the drought.",
+      "isFinal": false
+    },
+    {
+      "id": 7,
+      "name": "Psalm 2:1",
+      "text": "As at the beginning, so at the end, all manner of fly and wasp shall fill the air.",
+      "isFinal": false
+    },
+    {
+      "id": 8,
+      "name": "Psalm 2:2",
+      "text": "And the ground pale with maggots.",
+      "isFinal": false
+    },
+    {
+      "id": 9,
+      "name": "Psalm 2:3",
+      "text": "And from the Spears: a frost. Born from Bergen Chrypt and covering all.",
+      "isFinal": false
+    },
+    {
+      "id": 10,
+      "name": "Psalm 2:4",
+      "text": "And in ten days and one the writings of sorcerers will be made pale as air.",
+      "isFinal": false
+    },
+    {
+      "id": 11,
+      "name": "Psalm 2:5",
+      "text": "And glass shall become quartz.",
+      "isFinal": false
+    },
+    {
+      "id": 12,
+      "name": "Psalm 2:6",
+      "text": "And SHE shall see HIM grow stronger. And SHE reveals herself and all shall be slain.",
+      "isFinal": false
+    },
+    {
+      "id": 13,
+      "name": "Psalm 3:1",
+      "text": "At Graven-Tosk the soil shall grow warm and those who rest be made to walk.",
+      "isFinal": false
+    },
+    {
+      "id": 14,
+      "name": "Psalm 3:2",
+      "text": "In the heart of Sarkash fog and dusk shall breathe beneath the waking trees. That which was hewed by man shall now hew in its turn.",
+      "isFinal": false
+    },
+    {
+      "id": 15,
+      "name": "Psalm 3:3",
+      "text": "And hunger shall come among you. You shall dig roots and pull children from the breast. The gaunt shall prey upon the gaunt.",
+      "isFinal": false
+    },
+    {
+      "id": 16,
+      "name": "Psalm 3:4",
+      "text": "The great shall be made poor and the poor poorer still.",
+      "isFinal": false
+    },
+    {
+      "id": 17,
+      "name": "Psalm 3:5",
+      "text": "Then shall come rain unending and the day shall be made night by its coming.",
+      "isFinal": false
+    },
+    {
+      "id": 18,
+      "name": "Psalm 3:6",
+      "text": "Brother shall slay Brother and Sister poison Sister.",
+      "isFinal": false
+    },
+    {
+      "id": 19,
+      "name": "Psalm 4:1",
+      "text": "For five days and five nights mothers flesh shall be the cloak of demons.",
+      "isFinal": false
+    },
+    {
+      "id": 20,
+      "name": "Psalm 4:2",
+      "text": "And for five days and five nights shall fathers weep.",
+      "isFinal": false
+    },
+    {
+      "id": 21,
+      "name": "Psalm 4:3",
+      "text": "Look to the West. Forth comes fire, and a horde, and the Kingdoms burn.",
+      "isFinal": false
+    },
+    {
+      "id": 22,
+      "name": "Psalm 4:4",
+      "text": "The liar, Arkh shall make knots of the hearts of men, sundering the strongest of bonds.",
+      "isFinal": false
+    },
+    {
+      "id": 23,
+      "name": "Psalm 4:5",
+      "text": "Behold now the Endless Sea, where Leviathan causes waves to be as mountains.",
+      "isFinal": false
+    },
+    {
+      "id": 24,
+      "name": "Psalm 4:6",
+      "text": "And Leviathan shall come among you. Children winterborn and fated to fall before snow, both shall it take.",
+      "isFinal": false
+    },
+    {
+      "id": 25,
+      "name": "Psalm 5:1",
+      "text": "The lake and brook shall blacken and the water become tar.",
+      "isFinal": false
+    },
+    {
+      "id": 26,
+      "name": "Psalm 5:2",
+      "text": "The trees shall wither, shrivel and die.",
+      "isFinal": false
+    },
+    {
+      "id": 27,
+      "name": "Psalm 5:3",
+      "text": "And birds shall fall dead from the sky.",
+      "isFinal": false
+    },
+    {
+      "id": 28,
+      "name": "Psalm 5:4",
+      "text": "In one night all those not yet of seven years and seven days shall pass. Born and unborn. And dawn shall give them life as eaters of men.",
+      "isFinal": false
+    },
+    {
+      "id": 29,
+      "name": "Psalm 5:5",
+      "text": "The sky shall weep fire and a great stone shall plummet as a city fallen from heaven. Its gift is Death and madness is its herald.",
+      "isFinal": false
+    },
+    {
+      "id": 30,
+      "name": "Psalm 5:6",
+      "text": "And the last King and the last Queen shall wither to dust. Their wretched courts are devoured by wolves.",
+      "isFinal": false
+    },
+    {
+      "id": 31,
+      "name": "Psalm 6:1",
+      "text": "You shall know the last day is come. The sun shall set and never rise.",
+      "isFinal": false
+    },
+    {
+      "id": 32,
+      "name": "Psalm 6:2",
+      "text": "And day shall be as night and night as day. You shall not sleep, neither shall you wake.",
+      "isFinal": false
+    },
+    {
+      "id": 33,
+      "name": "Psalm 6:3",
+      "text": "Anthelia shall have her will and drink all colour from the world.",
+      "isFinal": false
+    },
+    {
+      "id": 34,
+      "name": "Psalm 6:4",
+      "text": "Those who walk on two legs shall be nameless as the beasts of the field.",
+      "isFinal": false
+    },
+    {
+      "id": 35,
+      "name": "Psalm 6:5",
+      "text": "The earth shall vein, bringing black serpents forth from within the earth.",
+      "isFinal": false
+    },
+    {
+      "id": 36,
+      "name": "Psalm 6:6",
+      "text": "And the unnamed enter the earth, passing through the Veil as it is sundered by Daejmon, the left underling of Nechrubel.",
+      "isFinal": true
+    },
+
+]
