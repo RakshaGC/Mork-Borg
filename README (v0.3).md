@@ -6,3 +6,5 @@ Version(V) 0.1 (06/20/2026): Misery Tracker completed. Contains the 36 random Mi
 V0.2 (06/21/2026): Added sendchat function to test in Sandbox. First run successful!
 
 V0.3 (06/21/2026): Added state summary function (mb-misery list)
+
+V0.4 (07/13/2026): Help function and state tracking added
