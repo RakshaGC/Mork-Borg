@@ -1,219 +1,681 @@
-const MISERIES = [
-    {
-      "id": 1,
-      "name": "Psalm 1:1",
-      "text": "The City shall be made hollow. Of those who rest in hollowness, they shall not be seen.",
-      "isFinal": false
-    },
-    {
-      "id": 2,
-      "name": "Psalm 1:2",
-      "text": "And the earth shall shake and be riven. And from the cracks shall rise a poisonous mist, and in ten days it will shroud the world.",
-      "isFinal": false
-    },
-    {
-      "id": 3,
-      "name": "Psalm 1:3",
-      "text": "Of those who build mightily, stone by stone, so shall they fall, stone by stone.",
-      "isFinal": false
-    },
-    {
-      "id": 4,
-      "name": "Psalm 1:4",
-      "text": "And the depths of the underworld shall bring forth flying spectres and crawling beasts. In their passing the worm grows fat, the vulture weary.",
-      "isFinal": false
-    },
-    {
-      "id": 5,
-      "name": "Psalm 1:5",
-      "text": "Doubt is crowned. The loyal shall turn their blades on those who silver gave.",
-      "isFinal": false
-    },
-    {
-      "id": 6,
-      "name": "Psalm 1:6",
-      "text": "And blood-cough shall spread like fire across the wastelands of the drought.",
-      "isFinal": false
-    },
-    {
-      "id": 7,
-      "name": "Psalm 2:1",
-      "text": "As at the beginning, so at the end, all manner of fly and wasp shall fill the air.",
-      "isFinal": false
-    },
-    {
-      "id": 8,
-      "name": "Psalm 2:2",
-      "text": "And the ground pale with maggots.",
-      "isFinal": false
-    },
-    {
-      "id": 9,
-      "name": "Psalm 2:3",
-      "text": "And from the Spears: a frost. Born from Bergen Chrypt and covering all.",
-      "isFinal": false
-    },
-    {
-      "id": 10,
-      "name": "Psalm 2:4",
-      "text": "And in ten days and one the writings of sorcerers will be made pale as air.",
-      "isFinal": false
-    },
-    {
-      "id": 11,
-      "name": "Psalm 2:5",
-      "text": "And glass shall become quartz.",
-      "isFinal": false
-    },
-    {
-      "id": 12,
-      "name": "Psalm 2:6",
-      "text": "And SHE shall see HIM grow stronger. And SHE reveals herself and all shall be slain.",
-      "isFinal": false
-    },
-    {
-      "id": 13,
-      "name": "Psalm 3:1",
-      "text": "At Graven-Tosk the soil shall grow warm and those who rest be made to walk.",
-      "isFinal": false
-    },
-    {
-      "id": 14,
-      "name": "Psalm 3:2",
-      "text": "In the heart of Sarkash fog and dusk shall breathe beneath the waking trees. That which was hewed by man shall now hew in its turn.",
-      "isFinal": false
-    },
-    {
-      "id": 15,
-      "name": "Psalm 3:3",
-      "text": "And hunger shall come among you. You shall dig roots and pull children from the breast. The gaunt shall prey upon the gaunt.",
-      "isFinal": false
-    },
-    {
-      "id": 16,
-      "name": "Psalm 3:4",
-      "text": "The great shall be made poor and the poor poorer still.",
-      "isFinal": false
-    },
-    {
-      "id": 17,
-      "name": "Psalm 3:5",
-      "text": "Then shall come rain unending and the day shall be made night by its coming.",
-      "isFinal": false
-    },
-    {
-      "id": 18,
-      "name": "Psalm 3:6",
-      "text": "Brother shall slay Brother and Sister poison Sister.",
-      "isFinal": false
-    },
-    {
-      "id": 19,
-      "name": "Psalm 4:1",
-      "text": "For five days and five nights mothers flesh shall be the cloak of demons.",
-      "isFinal": false
-    },
-    {
-      "id": 20,
-      "name": "Psalm 4:2",
-      "text": "And for five days and five nights shall fathers weep.",
-      "isFinal": false
-    },
-    {
-      "id": 21,
-      "name": "Psalm 4:3",
-      "text": "Look to the West. Forth comes fire, and a horde, and the Kingdoms burn.",
-      "isFinal": false
-    },
-    {
-      "id": 22,
-      "name": "Psalm 4:4",
-      "text": "The liar, Arkh shall make knots of the hearts of men, sundering the strongest of bonds.",
-      "isFinal": false
-    },
-    {
-      "id": 23,
-      "name": "Psalm 4:5",
-      "text": "Behold now the Endless Sea, where Leviathan causes waves to be as mountains.",
-      "isFinal": false
-    },
-    {
-      "id": 24,
-      "name": "Psalm 4:6",
-      "text": "And Leviathan shall come among you. Children winterborn and fated to fall before snow, both shall it take.",
-      "isFinal": false
-    },
-    {
-      "id": 25,
-      "name": "Psalm 5:1",
-      "text": "The lake and brook shall blacken and the water become tar.",
-      "isFinal": false
-    },
-    {
-      "id": 26,
-      "name": "Psalm 5:2",
-      "text": "The trees shall wither, shrivel and die.",
-      "isFinal": false
-    },
-    {
-      "id": 27,
-      "name": "Psalm 5:3",
-      "text": "And birds shall fall dead from the sky.",
-      "isFinal": false
-    },
-    {
-      "id": 28,
-      "name": "Psalm 5:4",
-      "text": "In one night all those not yet of seven years and seven days shall pass. Born and unborn. And dawn shall give them life as eaters of men.",
-      "isFinal": false
-    },
-    {
-      "id": 29,
-      "name": "Psalm 5:5",
-      "text": "The sky shall weep fire and a great stone shall plummet as a city fallen from heaven. Its gift is Death and madness is its herald.",
-      "isFinal": false
-    },
-    {
-      "id": 30,
-      "name": "Psalm 5:6",
-      "text": "And the last King and the last Queen shall wither to dust. Their wretched courts are devoured by wolves.",
-      "isFinal": false
-    },
-    {
-      "id": 31,
-      "name": "Psalm 6:1",
-      "text": "You shall know the last day is come. The sun shall set and never rise.",
-      "isFinal": false
-    },
-    {
-      "id": 32,
-      "name": "Psalm 6:2",
-      "text": "And day shall be as night and night as day. You shall not sleep, neither shall you wake.",
-      "isFinal": false
-    },
-    {
-      "id": 33,
-      "name": "Psalm 6:3",
-      "text": "Anthelia shall have her will and drink all colour from the world.",
-      "isFinal": false
-    },
-    {
-      "id": 34,
-      "name": "Psalm 6:4",
-      "text": "Those who walk on two legs shall be nameless as the beasts of the field.",
-      "isFinal": false
-    },
-    {
-      "id": 35,
-      "name": "Psalm 6:5",
-      "text": "The earth shall vein, bringing black serpents forth from within the earth.",
-      "isFinal": false
-    },
-    {
-      "id": 36,
-      "name": "Psalm 6:6",
-      "text": "And the unnamed enter the earth, passing through the Veil as it is sundered by Daejmon, the left underling of Nechrubel.",
-      "isFinal": true
-    },
+// MÖRK BORG Misery Tracker for Roll20
+// Version 0.6 - Help, List, Add, Remove, Reset, Final, and Player Tracker commands
 
-]
+// ------------------------------------------------------------
+// 1. MISERY DATA
+// ------------------------------------------------------------
+// This is the master list of Miseries.
+// Add the full text of your Miseries here.
+// The ID, like "1:6", is what you type in chat commands.
+
+const MISERIES = {
+"1:1": {
+title: "Psalm 1:1",
+text: "The City shall be made hollow. Of those who rest in hollowness, they shall not be seen.",
+final: false
+},
+
+"1:2": {
+title: "Psalm 1:2",
+text: "And the earth shall shake and be riven. And from the cracks shall rise a poisonous mist, and in ten days it will shroud the world.",
+final: false
+},
+
+"1:3": {
+title: "Psalm 1:3",
+text: "Of those who build mightily, stone by stone, so shall they fall, stone by stone.",
+final: false
+},
+
+"1:4": {
+title: "Psalm 1:4",
+text: "And the depths of the underworld shall bring forth flying spectres and crawling beasts. In their passing the worm grows fat, the vulture weary.",
+final: false
+},
+
+"1:5": {
+title: "Psalm 1:5",
+text: "Doubt is crowned. The loyal shall turn their blades on those who silver gave.",
+final: false
+},
+
+"1:6": {
+title: "Psalm 1:6",
+text: "And blood-cough shall spread like fire across the wastelands of the drought.",
+final: false
+},
+
+"2:1": {
+title: "Psalm 2:1",
+text: "As at the beginning, so at the end, all manner of fly and wasp shall fill the air.",
+final: false
+},
+
+"2:2": {
+title: "Psalm 2:2",
+text: "And the ground pale with maggots.",
+final: false
+},
+
+"2:3": {
+title: "Psalm 2:3",
+text: "And from the Spears: a frost. Born from Bergen Chrypt and covering all.",
+final: false
+},
+
+"2:4": {
+title: "Psalm 2:4",
+text: "And in ten days and one the writings of sorcerers will be made pale as air.",
+final: false
+},
+
+"2:5": {
+title: "Psalm 2:5",
+text: "And glass shall become quartz.",
+final: false
+},
+
+"2:6": {
+title: "Psalm 2:6",
+text: "And SHE shall see HIM grow stronger. And SHE reveals herself and all shall be slain.",
+final: false
+},
+
+"3:1": {
+title: "Psalm 3:1",
+text: "At Graven-Tosk the soil shall grow warm and those who rest be made to walk.",
+final: false
+},
+
+"3:2": {
+title: "Psalm 3:2",
+text: "In the heart of Sarkash fog and dusk shall breathe beneath the waking trees. That which was hewed by man shall now hew in its turn.",
+final: false
+},
+
+"3:3": {
+title: "Psalm 3:3",
+text: "And hunger shall come among you. You shall dig roots and pull children from the breast. The gaunt shall prey upon the gaunt.",
+final: false
+},
+
+"3:4": {
+title: "Psalm 3:4",
+text: "The great shall be made poor and the poor poorer still.",
+final: false
+},
+
+"3:5": {
+title: "Psalm 3:5",
+text: "Then shall come rain unending and the day shall be made night by its coming.",
+final: false
+},
+
+"3:6": {
+title: "Psalm 3:6",
+text: "Brother shall slay Brother and Sister poison Sister.",
+final: false
+},
+
+"4:1": {
+title: "Psalm 4:1",
+text: "For five days and five nights mothers flesh shall be the cloak of demons.",
+final: false
+},
+
+"4:2": {
+title: "Psalm 4:2",
+text: "And for five days and five nights shall fathers weep.",
+final: false
+},
+
+"4:3": {
+title: "Psalm 4:3",
+text: "Look to the West. Forth comes fire, and a horde, and the Kingdoms burn.",
+final: false
+},
+
+"4:4": {
+title: "Psalm 4:4",
+text: "The liar, Arkh shall make knots of the hearts of men, sundering the strongest of bonds.",
+final: false
+},
+
+"4:5": {
+title: "Psalm 4:5",
+text: "Behold now the Endless Sea, where Leviathan causes waves to be as mountains.",
+final: false
+},
+
+"4:6": {
+title: "Psalm 4:6",
+text: "And Leviathan shall come among you. Children winterborn and fated to fall before snow, both shall it take.",
+final: false
+},
+
+"5:1": {
+title: "Psalm 5:1",
+text: "The lake and brook shall blacken and the water become tar.",
+final: false
+},
+
+"5:2": {
+title: "Psalm 5:2",
+text: "The trees shall wither, shrivel and die.",
+final: false
+},
+
+"5:3": {
+title: "Psalm 5:3",
+text: "And birds shall fall dead from the sky.",
+final: false
+},
+
+"5:4": {
+title: "Psalm 5:4",
+text: "In one night all those not yet of seven years and seven days shall pass. Born and unborn. And dawn shall give them life as eaters of men.",
+final: false
+},
+
+"5:5": {
+title: "Psalm 5:5",
+text: "The sky shall weep fire and a great stone shall plummet as a city fallen from heaven. Its gift is Death and madness is its herald.",
+final: false
+},
+
+"5:6": {
+title: "Psalm 5:6",
+text: "And the last King and the last Queen shall wither to dust. Their wretched courts are devoured by wolves.",
+final: false
+},
+
+"6:1": {
+title: "Psalm 6:1",
+text: "You shall know the last day is come. The sun shall set and never rise.",
+final: false
+},
+
+"6:2": {
+title: "Psalm 6:2",
+text: "And day shall be as night and night as day. You shall not sleep, neither shall you wake.",
+final: false
+},
+
+"6:3": {
+title: "Psalm 6:3",
+text: "Anthelia shall have her will and drink all colour from the world.",
+final: false
+},
+
+"6:4": {
+title: "Psalm 6:4",
+text: "Those who walk on two legs shall be nameless as the beasts of the field.",
+final: false
+},
+
+"6:5": {
+title: "Psalm 6:5",
+text: "The earth shall vein, bringing black serpents forth from within the earth.",
+final: false
+},
+
+"6:6": {
+title: "Psalm 6:6",
+text: "And the unnamed enter the earth, passing through the Veil as it is sundered by Daejmon, the left underling of Nechrubel.",
+final: false
+},
+"7:7": {
+  title: "Psalm 7:7",
+  text: "All praise Yetsabu-Nech, the underworld’s nightmare, the black disk which stands before the sun! All praise Verhu, beaming with delight! All praise the fire which burns all! And the darkness shall swallow the darkness.",
+  final: true
+}
+};
+const MAX_ACTIVE_MISERIES = 6;
+
+
+// ------------------------------------------------------------
+// 2. TRACKER STATE
+// ------------------------------------------------------------
+// Roll20's `state` object remembers things between sessions.
+// This function makes sure the tracker exists and has the right shape.
+
+function getTracker() {
+  if (!state.MB_MiseryTracker) {
+    state.MB_MiseryTracker = {};
+  }
+
+  if (!Array.isArray(state.MB_MiseryTracker.active)) {
+    state.MB_MiseryTracker.active = [];
+  }
+
+  if (typeof state.MB_MiseryTracker.finalTriggered !== "boolean") {
+    state.MB_MiseryTracker.finalTriggered = false;
+  }
+
+  return state.MB_MiseryTracker;
+}
+
+
+// ------------------------------------------------------------
+// 3. OUTPUT HELPERS
+// ------------------------------------------------------------
+// These functions help format what Roll20 says back to you.
+
+function whisperGM(message) {
+sendChat("Misery Tracker", "/w gm " + message);
+}
+
+function sayPublic(message) {
+sendChat("Misery Tracker", message);
+}
+
+function box(title, body) {
+return (
+"<div style='border:1px solid #6f1d1b; background:#1a1111; color:#f2e6d8; padding:10px; font-family:Georgia, serif;'>" +
+"<div style='font-size:16px; font-weight:bold; color:#d6a24a; margin-bottom:6px;'>" + title + "</div>" +
+"<div style='font-size:13px; line-height:1.35;'>" + body + "</div>" +
+"</div>"
+);
+}
+
+function smallButton(label, command) {
+return (
+"<a href='" + command + "' style='background:#3b1f1f; color:#f2e6d8; border:1px solid #d6a24a; padding:4px 7px; text-decoration:none; font-weight:bold; display:inline-block; margin:2px 0;'>" +
+label +
+"</a>"
+);
+}
+
+function commandHelpRow(label, command, description) {
+return (
+"<div style='margin-bottom:9px;'>" +
+smallButton(label, command) +
+"<div style='font-size:12px; color:#c9b99a; margin-top:2px;'>" + description + "</div>" +
+"</div>"
+);
+}
+
+function formatMiseryLine(id) {
+const misery = MISERIES[id];
+
+if (!misery) {
+return (
+"<div style='border-left:3px solid #777; padding-left:8px; margin-bottom:8px;'>" +
+"<b>" + id + " - Unknown Misery</b>" +
+"</div>"
+);
+}
+
+return (
+"<div style='border-left:3px solid #d6a24a; padding-left:8px; margin-bottom:10px;'>" +
+"<div style='font-weight:bold; color:#d6a24a;'>" + id + " - " + misery.title + "</div>" +
+"<div style='margin-top:3px;'>" + misery.text + "</div>" +
+"</div>"
+);
+}
+
+function getRollableMiseryIds() {
+return Object.keys(MISERIES).filter(function(id) {
+return MISERIES[id].final !== true;
+});
+}
+
+function getRemainingMiseryIds() {
+const tracker = getTracker();
+const rollableIds = getRollableMiseryIds();
+
+return rollableIds.filter(function(id) {
+return !tracker.active.includes(id);
+});
+}
+
+function hasReachedMiseryCap() {
+const tracker = getTracker();
+return tracker.active.length >= MAX_ACTIVE_MISERIES;
+}
+
+function rollMisery() {
+const tracker = getTracker();
+
+if (hasReachedMiseryCap()) {
+whisperGM(
+box(
+"Misery Cap Reached",
+"Six Miseries are already active.<br><br>" +
+"Use <b>!mb-misery final</b> when you are ready to trigger Psalm 7:7."
+)
+);
+return;
+}
+
+const remainingIds = getRemainingMiseryIds();
+
+if (remainingIds.length === 0) {
+whisperGM(
+box(
+"No Rollable Miseries Remain",
+"The final Misery has not been triggered automatically.<br><br>" +
+"Use <b>!mb-misery final</b> when you are ready to end the world."
+)
+);
+return;
+}
+
+const randomIndex = randomInteger(remainingIds.length) - 1;
+const miseryId = remainingIds[randomIndex];
+
+tracker.active.push(miseryId);
+
+whisperGM(
+box(
+"Rolled Misery",
+formatMiseryLine(miseryId) +
+"<br><b>Misery Clock:</b> " + tracker.active.length + "/" + MAX_ACTIVE_MISERIES
+)
+);
+}
+
+function showHelp() {
+const body =
+commandHelpRow("HELP", "!mb-misery help", "Show this command menu.") +
+commandHelpRow("LIST", "!mb-misery list", "Show the full GM-facing tracker with active Miseries and final status.") +
+commandHelpRow("PLAYER TRACKER", "!mb-misery player", "Post a public, player-facing Misery tracker to the chat.") +
+commandHelpRow("ROLL", "!mb-misery roll", "Roll a new random Misery. Already-active Miseries cannot be rolled again.") +
+commandHelpRow("ADD 1:6", "!mb-misery add", "Manually add a specific Misery by psalm key. Replace 1:6 with the desired key.") +
+commandHelpRow("REMOVE 1:6", "!mb-misery remove", "Remove an active Misery by psalm key. Replace 1:6 with the desired key.") +
+commandHelpRow("RESET", "!mb-misery reset", "Ask for confirmation, then clear all active Miseries and final status.") +
+commandHelpRow("FINAL", "!mb-misery final", "Ask for confirmation, then trigger Psalm 7:7.");
+
+whisperGM(box("MÖRK BORG Misery Tracker", body));
+}
+
+function showList() {
+const tracker = getTracker();
+
+let body =
+"<b>Misery Clock:</b> " + tracker.active.length + "/" + MAX_ACTIVE_MISERIES + "<br>" +
+"<b>Final Misery:</b> " + (tracker.finalTriggered ? "Triggered" : "Pending") + "<br><br>";
+
+if (tracker.active.length === 0) {
+body += "<i>No Miseries are currently active.</i>";
+whisperGM(box("Active Miseries", body));
+return;
+}
+
+tracker.active.forEach(function(id) {
+body += formatMiseryLine(id);
+});
+
+whisperGM(box("Active Miseries", body));
+}
+
+function showPlayerTracker() {
+const tracker = getTracker();
+
+let body =
+"<b>Misery Clock:</b> " + tracker.active.length + "/" + MAX_ACTIVE_MISERIES + "<br><br>";
+
+if (tracker.active.length === 0) {
+body += "<i>No Miseries are currently active.</i>";
+sayPublic(box("The Miseries", body));
+return;
+}
+
+tracker.active.forEach(function(id) {
+body += formatMiseryLine(id);
+});
+
+if (tracker.finalTriggered) {
+body +=
+"<div style='border-left:3px solid #9b111e; padding-left:8px; margin-top:10px;'>" +
+"<div style='font-weight:bold; color:#9b111e;'>Psalm 7:7 - The Final Misery</div>" +
+"<div style='margin-top:3px;'>All praise Yetsabu-Nech, the underworld’s nightmare, the black disk which stands before the sun! All praise Verhu, beaming with delight! All praise the fire which burns all! And the darkness shall swallow the darkness.</div>" +
+"</div>";
+}
+
+sayPublic(box("The Miseries", body));
+}
+
+function showResetConfirmation() {
+const body =
+"This will clear all active Miseries and reset the final Misery flag.<br><br>" +
+smallButton("YES, RESET", "!mb-misery reset confirm") +
+" " +
+smallButton("Cancel", "!mb-misery reset cancel");
+
+whisperGM(box("Reset Misery Tracker?", body));
+}
+
+function showFinalConfirmation() {
+const tracker = getTracker();
+
+let warning = "";
+
+if (tracker.active.length < MAX_ACTIVE_MISERIES) {
+warning =
+"<b>Warning:</b> Fewer than six Miseries are active.<br>" +
+"<b>Active Miseries:</b> " + tracker.active.length + "/" + MAX_ACTIVE_MISERIES + "<br><br>";
+}
+
+const body =
+warning +
+"This will trigger Psalm 7:7 and mark the end of the Misery cycle.<br><br>" +
+smallButton("YES, END THE WORLD", "!mb-misery final confirm") +
+" " +
+smallButton("Cancel", "!mb-misery final cancel");
+
+whisperGM(box("Trigger Final Misery?", body));
+}
+
+
+
+// ------------------------------------------------------------
+// 4. CHAT COMMAND HANDLER
+// ------------------------------------------------------------
+// This listens for Roll20 chat commands like:
+// !mb-misery list
+// !mb-misery add 1:6
+
+on("chat:message", function(msg) {
+  if (msg.type !== "api") return;
+
+  const args = msg.content.trim().split(/\s+/);
+  const command = args[0];
+  const subcommand = args[1];
+
+  if (command !== "!mb-misery") return;
+
+
+  // ----------------------------------------------------------
+  // HELP
+  // ----------------------------------------------------------
+
+  if (subcommand === "help" || !subcommand) {
+    showHelp();
+    return;
+  }
+
+
+  // ----------------------------------------------------------
+  // LIST
+  // ----------------------------------------------------------
+
+  if (subcommand === "list") {
+    showList();
+    return;
+  }
+
+  // ----------------------------------------------------------
+  // PLAYER-FACING TRACKER
+  // ----------------------------------------------------------
+
+  if (subcommand === "player") {
+    showPlayerTracker();
+    return;
+  }
+
+
+  // ----------------------------------------------------------
+// ROLL
+// ----------------------------------------------------------
+
+if (subcommand === "roll") {
+rollMisery();
+return;
+}
+
+
+  // ----------------------------------------------------------
+  // ADD
+  // ----------------------------------------------------------
+
+  if (subcommand === "add") {
+    const tracker = getTracker();
+    const miseryId = args[2];
+
+    if (!miseryId) {
+      whisperGM("Please provide a Misery ID, like: !mb-misery add 1:6");
+      return;
+    }
+
+    if (!MISERIES[miseryId]) {
+      whisperGM("Unknown Misery ID: " + miseryId);
+      return;
+    }
+    ```
+if (MISERIES[miseryId].final !== true && hasReachedMiseryCap()) {
+  whisperGM(
+    "<b>Misery cap reached.</b><br>" +
+    "Six Miseries are already active.<br>" +
+    "Remove one first, or use !mb-misery final when you are ready for Psalm 7:7."
+  );
+  return;
+}
+```
+
+
+    if (tracker.active.includes(miseryId)) {
+      whisperGM("Misery " + miseryId + " is already active.");
+      return;
+    }
+
+    tracker.active.push(miseryId);
+
+    whisperGM("Added Misery: " + miseryId + " - " + MISERIES[miseryId].title);
+    return;
+  }
+
+
+  // ----------------------------------------------------------
+  // REMOVE
+  // ----------------------------------------------------------
+
+  if (subcommand === "remove") {
+    const tracker = getTracker();
+    const miseryId = args[2];
+
+    if (!miseryId) {
+      whisperGM("Please provide a Misery ID, like: !mb-misery remove 1:6");
+      return;
+    }
+
+    if (!MISERIES[miseryId]) {
+      whisperGM("Unknown Misery ID: " + miseryId);
+      return;
+    }
+
+    if (!tracker.active.includes(miseryId)) {
+      whisperGM("Misery " + miseryId + " is not currently active.");
+      return;
+    }
+
+    tracker.active = tracker.active.filter(function(id) {
+      return id !== miseryId;
+    });
+
+    whisperGM("Removed Misery: " + miseryId + " - " + MISERIES[miseryId].title);
+    return;
+  }
+
+  // ----------------------------------------------------------
+// RESET
+// ----------------------------------------------------------
+
+if (subcommand === "reset") {
+  const confirmation = args[2];
+
+  if (!confirmation) {
+    showResetConfirmation();
+    return;
+  }
+
+  if (confirmation === "cancel") {
+    whisperGM("Reset cancelled.");
+    return;
+  }
+
+  if (confirmation !== "confirm") {
+    whisperGM("Unknown reset option. Use !mb-misery reset, then click the confirmation button.");
+    return;
+  }
+
+  state.MB_MiseryTracker = {
+    active: [],
+    finalTriggered: false
+  };
+
+  whisperGM("Misery Tracker reset. No Miseries are currently active.");
+  return;
+}
+// ----------------------------------------------------------
+// FINAL
+// ----------------------------------------------------------
+
+if (subcommand === "final") {
+const tracker = getTracker();
+const confirmation = args[2];
+const finalMiseryId = "7:7";
+
+
+if (!MISERIES[finalMiseryId]) {
+  whisperGM("Final Misery 7:7 is missing from the MISERIES list.");
+  return;
+}
+
+if (tracker.finalTriggered === true) {
+  whisperGM("The final Misery has already been triggered.");
+  return;
+}
+
+if (!confirmation) {
+  showFinalConfirmation();
+  return;
+}
+
+if (confirmation === "cancel") {
+  whisperGM("Final Misery cancelled.");
+  return;
+}
+
+if (confirmation !== "confirm") {
+  whisperGM("Unknown final option. Use !mb-misery final, then click the confirmation button.");
+  return;
+}
+
+tracker.finalTriggered = true;
+
+whisperGM(
+  "<b>FINAL MISERY TRIGGERED</b><br><br>" +
+  formatMiseryLine(finalMiseryId)
+);
+return;
+
+
+}
+
+  // ----------------------------------------------------------
+  // UNKNOWN COMMAND
+  // ----------------------------------------------------------
+
+  whisperGM("Unknown command: " + subcommand);
+});
