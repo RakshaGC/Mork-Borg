@@ -8,3 +8,7 @@ V0.2 (06/21/2026): Added sendchat function to test in Sandbox. First run success
 V0.3 (06/21/2026): Added state summary function (mb-misery list)
 
 V0.4 (07/13/2026): Help function and state tracking added
+
+v0.5 (07/14/2026): Player facing tracker added. Remove/Reset Functions added. Misery 7:7 separated
+
+v0.6 (07/15/2026): Post Templates added (colors, buttons)
