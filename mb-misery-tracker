@@ -381,8 +381,8 @@ commandHelpRow("HELP", "!mb-misery help", "Show this command menu.") +
 commandHelpRow("LIST", "!mb-misery list", "Show the full GM-facing tracker with active Miseries and final status.") +
 commandHelpRow("PLAYER TRACKER", "!mb-misery player", "Post a public, player-facing Misery tracker to the chat.") +
 commandHelpRow("ROLL", "!mb-misery roll", "Roll a new random Misery. Already-active Miseries cannot be rolled again.") +
-commandHelpRow("ADD 1:6", "!mb-misery add", "Manually add a specific Misery by psalm key. Replace 1:6 with the desired key.") +
-commandHelpRow("REMOVE 1:6", "!mb-misery remove", "Remove an active Misery by psalm key. Replace 1:6 with the desired key.") +
+commandHelpRow("ADD", "!mb-misery add", "Manually add a specific Misery by psalm key. Replace 1:6 with the desired key.") +
+commandHelpRow("REMOVE", "!mb-misery remove", "Remove an active Misery by psalm key. Replace 1:6 with the desired key.") +
 commandHelpRow("RESET", "!mb-misery reset", "Ask for confirmation, then clear all active Miseries and final status.") +
 commandHelpRow("FINAL", "!mb-misery final", "Ask for confirmation, then trigger Psalm 7:7.");
 
